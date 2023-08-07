@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;900&family=Bellefair&display=swap");
-.home-landing-page-btn, .home-main-text h1 {
+.main-planet-interactive-component div h1, .home-landing-page-btn, .home-main-text h1 {
   font-family: "Bellefair";
 }
 
@@ -7,7 +7,7 @@
   font-family: "Barlow Condensed";
 }
 
-.home-landing-page-btn, .home-main-text h1 {
+.main-planet-interactive-component div h1, .home-landing-page-btn, .home-main-text h1 {
   color: #FFFFFF;
 }
 
@@ -56,7 +56,7 @@
 .main-nav-component .nav-list-wrap {
   padding-top: 1em;
   padding-bottom: 1em;
-  background: linear-gradient(to right, #0f1220, rgba(252, 252, 252, 0.205), rgba(252, 252, 252, 0.144));
+  background: linear-gradient(to right, #0f1220, rgba(252, 252, 252, 0.103), rgba(252, 252, 252, 0.068));
   filter: blur();
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -76,7 +76,7 @@
     display: flex;
     align-items: center;
     padding: 0em 1em;
-    min-height: 100%;
+    min-height: 100px;
     width: auto;
     right: 0px;
   }
@@ -85,7 +85,7 @@
   .main-nav-component .nav-list-wrap {
     align-items: center;
     padding: 0em;
-    width: 60%;
+    width: 70%;
   }
 }
 .main-nav-component .nav-list-wrap ul {
@@ -95,10 +95,48 @@
   padding: 0em;
   padding-left: 5px;
   gap: 1em;
+  width: 100%;
 }
 @media (min-width: 640px) {
   .main-nav-component .nav-list-wrap ul {
     flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.main-nav-component .nav-list-wrap ul li {
+  position: relative;
+  padding-left: 1em;
+}
+@media (min-width: 640px) {
+  .main-nav-component .nav-list-wrap ul li {
+    padding-left: 0em;
+  }
+}
+.main-nav-component .nav-list-wrap ul li::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background-color: white;
+  bottom: 0px;
+  transition: width 300ms ease-in;
+}
+@media (min-width: 640px) {
+  .main-nav-component .nav-list-wrap ul li::before {
+    bottom: -48px;
+  }
+}
+@media (min-width: 836px) {
+  .main-nav-component .nav-list-wrap ul li::before {
+    bottom: -37px;
+  }
+}
+.main-nav-component .nav-list-wrap ul li:hover::before {
+  width: 50%;
+}
+@media (min-width: 640px) {
+  .main-nav-component .nav-list-wrap ul li:hover::before {
+    width: 100%;
   }
 }
 .main-nav-component .nav-list-wrap ul li .nav-item-num {
@@ -109,6 +147,8 @@
 .main-nav-component .nav-list-wrap ul li .nav-item {
   letter-spacing: 1px;
   text-decoration: none;
+  color: #FFFFFF;
+  font-size: 17px;
 }
 @media (min-width: 640px) {
   .main-nav-component .main-web-logo {
@@ -122,7 +162,7 @@
 @media (min-width: 836px) {
   .main-content-container {
     height: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
   }
 }
 
@@ -218,4 +258,59 @@
     width: 360px;
     height: 360px;
   }
+}
+
+.destination-content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid red;
+}
+@media (min-width: 836px) {
+  .destination-content-container {
+    flex-direction: row;
+  }
+}
+
+.main-planet-display-component {
+  display: flex;
+  flex-direction: column;
+}
+.main-planet-display-component .planet-display-header {
+  border: 1px solid red;
+  min-width: 320px;
+  max-width: 550px;
+}
+.main-planet-display-component .planet-display-header p {
+  font-size: 35px;
+}
+.main-planet-display-component .planet-display-header span {
+  font-size: 30px;
+  padding-right: 0.5em;
+  letter-spacing: 2px;
+}
+.main-planet-display-component .planet-display {
+  border: 1px solid orange;
+  min-width: 320px;
+  max-width: 550px;
+}
+.main-planet-display-component .planet-display .planet {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-planet-interactive-component {
+  border: 1px solid red;
+  width: 550px;
+  height: -moz-max-content;
+  height: max-content;
+}
+.main-planet-interactive-component nav button {
+  border: none;
+  background: none;
+}
+.main-planet-interactive-component div h1 {
+  font-size: 100px;
 }/*# sourceMappingURL=App.css.map */
