@@ -1,14 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;900&family=Bellefair&display=swap");
-.main-planet-interactive-component div h1, .home-landing-page-btn, .home-main-text h1 {
+.home-landing-page-btn, .home-main-text h1, .main-planet-interactive-component div h1, .main-planet-interactive-component .display-distance-travel-time h2 {
   font-family: "Bellefair";
 }
 
-.home-main-text h3 {
+.home-main-text h3, .main-planet-interactive-component .display-distance-travel-time p, .main-planet-interactive-component .planet-interactive-nav-row button {
   font-family: "Barlow Condensed";
 }
 
-.main-planet-interactive-component div h1, .home-landing-page-btn, .home-main-text h1 {
+.home-landing-page-btn, .home-main-text h1, .main-planet-interactive-component div h1, .main-planet-interactive-component .display-distance-travel-time h2, .main-planet-interactive-component .display-distance-travel-time p, .main-planet-interactive-component .planet-interactive-nav-row button {
   color: #FFFFFF;
+}
+
+.main-planet-interactive-component .planet-interactive-nav-row button {
+  text-transform: uppercase;
+  font-size: clamp(1rem, 0.9vw, 3rem);
+  letter-spacing: 2.5px;
 }
 
 .App {
@@ -262,37 +268,27 @@
 
 .destination-content-container {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  border: 2px solid red;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  height: auto;
 }
-@media (min-width: 836px) {
+@media (min-width: 1194px) {
   .destination-content-container {
+    justify-content: space-evenly;
     flex-direction: row;
   }
 }
 
-.main-planet-display-component {
-  display: flex;
-  flex-direction: column;
-}
-.main-planet-display-component .planet-display-header {
-  border: 1px solid red;
-  min-width: 320px;
-  max-width: 550px;
-}
-.main-planet-display-component .planet-display-header p {
-  font-size: 35px;
-}
-.main-planet-display-component .planet-display-header span {
-  font-size: 30px;
-  padding-right: 0.5em;
-  letter-spacing: 2px;
-}
 .main-planet-display-component .planet-display {
-  border: 1px solid orange;
-  min-width: 320px;
-  max-width: 550px;
+  width: 100%;
+}
+@media (min-width: 1194px) {
+  .main-planet-display-component .planet-display {
+    width: 110%;
+    padding-top: 1em;
+  }
 }
 .main-planet-display-component .planet-display .planet {
   width: 100%;
@@ -302,15 +298,63 @@
 }
 
 .main-planet-interactive-component {
-  border: 1px solid red;
   width: 550px;
-  height: -moz-max-content;
-  height: max-content;
+  height: auto;
+  text-align: center;
 }
-.main-planet-interactive-component nav button {
+.main-planet-interactive-component .planet-interactive-nav-row {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.main-planet-interactive-component .planet-interactive-nav-row button {
   border: none;
   background: none;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2.7px;
+  cursor: pointer;
 }
 .main-planet-interactive-component div h1 {
-  font-size: 100px;
+  font-size: clamp(6.25rem, 1.9022rem + 21.7391vw, 7.375rem);
+  margin: 0;
+}
+.main-planet-interactive-component div p {
+  margin: 0;
+  color: #D0D6F9;
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: clamp(1.0625rem, 0.9755rem + 0.4348vw, 1.25rem);
+}
+.main-planet-interactive-component .display-distance-travel-time {
+  margin-top: 3em;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8em;
+  border-top: 2px solid rgba(208, 214, 249, 0.8431372549);
+}
+.main-planet-interactive-component .display-distance-travel-time p {
+  color: #D0D6F9;
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+.main-planet-interactive-component .display-distance-travel-time h2 {
+  font-size: 28px;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+@media (min-width: 1194px) {
+  .main-planet-interactive-component {
+    text-align: left;
+  }
+  .main-planet-interactive-component .planet-interactive-nav-row {
+    justify-content: start;
+  }
+  .main-planet-interactive-component .display-distance-travel-time {
+    justify-content: start;
+  }
 }/*# sourceMappingURL=App.css.map */

@@ -276,64 +276,112 @@
 //Destination
 .destination-content-container {
     display:flex;
-    justify-content: space-around;
     align-items:center;
-    border:2px solid red;
-    @media(min-width:836px){
-        flex-direction:row;
+    justify-content:center;
+    flex-direction: column;
+    gap:1em;
+
+    height:auto;
+    @media(min-width:1194px){
+        justify-content: space-evenly;
+        flex-direction: row;
     }
 }
 
 .main-planet-display-component {
-    display:flex;
-    flex-direction:column;
-
-
-    .planet-display-header {
-        border:1px solid red;
-        min-width:320px;
-        max-width:550px;
-
-        p {
-            font-size:35px;
-        }
-
-        span {
-            font-size:30px;
-            padding-right:0.5em;
-            letter-spacing:2px;
-        }
-    }
 
     .planet-display {
-        border:1px solid orange;
-        min-width:320px;
-        max-width:550px;
 
+        width:100%;
+
+        @media(min-width:1194px){
+            width:110%;
+            padding-top:1em;
+    
+        }
         .planet {
             width:100%;
             height:auto;
-            object-fit: cover;
+            object-fit:cover;
         }
     }
 }
 
 .main-planet-interactive-component {
-    border:1px solid red;
-    width:550px;
-    height:max-content;
 
-    nav {
+    width:550px;
+    height:auto;
+    text-align: center;
+
+    .planet-interactive-nav-row {
+        display:flex;
+        justify-content: center;
+        gap:1em;
+        margin-bottom:1em;
         button {
+            @extend %nav-text;
             border:none;
             background:none;
+            font-size:20px;
+            font-weight:500;
+            letter-spacing: 2.7px;
+            cursor:pointer;
         }
     }
 
     div {
         h1 {
-            @extend %heading-1;
-            font-size:100px;
+            @extend %heading-2;
+            font-size: clamp(6.25rem, 1.9022rem + 21.7391vw, 7.375rem);
+            margin:0;
+            
+        }
+        p {
+            margin:0;
+            color:#D0D6F9;
+            letter-spacing:3px;
+            font-weight:400;
+            font-size: clamp(1.0625rem, 0.9755rem + 0.4348vw, 1.25rem);
+            
+        }
+    }
+    .display-distance-travel-time {
+        margin-top:3em;
+        padding-top:1em;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:8em;
+
+        border-top:2px solid #d0d6f9d7;
+
+        p {
+            @extend %subheading-2;
+            color:#D0D6F9;
+            font-size:18px;
+            margin:0;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            @extend %subheading-1;
+            font-size:28px;
+            margin-top:5px;
+            letter-spacing:2px;
+        }
+
+    }
+
+    @media(min-width:1194px){
+        text-align: left;
+
+        .planet-interactive-nav-row{
+            justify-content: start;
+        }
+
+        .display-distance-travel-time{
+            justify-content: start;
         }
     }
 }
+
