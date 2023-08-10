@@ -1,4 +1,6 @@
+import React, { useState, useEffect } from 'react';
 import CorrespondingBackgroundImage from "./ResponsiveBackgrounds"
+import data from "./data.json"
 export default function Destinations(){
     const destinationDesktop = '/destination/background-destination-desktop.jpg'
     const destinationTablet = '/destination/background-destination-tablet.jpg'
