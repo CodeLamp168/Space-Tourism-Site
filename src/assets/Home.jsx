@@ -1,5 +1,6 @@
 import React from "react"
 import CorrespondingBackgroundImage from "./ResponsiveBackgrounds"
+import Label from "./PageLabel"
 export default function Home(){
     const homeDesktop = '/home/background-home-desktop.jpg'
     const homeMobile = '/home/background-home-mobile.jpg'
