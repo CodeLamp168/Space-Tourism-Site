@@ -322,7 +322,7 @@
         display:flex;
         justify-content: center;
         gap:1em;
-        margin-bottom:1em;
+        margin-bottom:2em;
         button {
             @extend %nav-text;
             border:none;
@@ -331,10 +331,20 @@
             font-weight:500;
             letter-spacing: 2.7px;
             cursor:pointer;
+            transform:width 300ms ease;
+            position:relative;
+            padding-bottom:5px;
+            transition:border 100ms ease-in;
         }
+        
+       .destination-active {
+        border-bottom:5px solid #D0D6F9;
+       }
     }
 
     div {
+        max-height:550px;
+        
         h1 {
             @extend %heading-2;
             font-size: clamp(6.25rem, 1.9022rem + 21.7391vw, 7.375rem);
