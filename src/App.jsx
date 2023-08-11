@@ -3,6 +3,7 @@ import MainNavComponent from './assets/MainNav';
 import Home from './assets/Home';
 import './App.css'
 import Destinations from './assets/Destinations';
+import CrewMembers from './assets/Crew';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
     <div className="App">
      
        <MainNavComponent/>
-       <Destinations/>
+       <CrewMembers/>
     </div>
   )
 }
