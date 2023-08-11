@@ -125,6 +125,7 @@
                 @media(min-width:640px){
                     padding-left:0em;
                 }
+                cursor:pointer;
 
                 &::before {
                     content:'';
@@ -144,6 +145,7 @@
                     }
 
                     transition:width 300ms ease-in
+
                 }
                 &:hover::before {
                     width:50%;

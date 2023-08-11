@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-export default function MainNavComponent() {
+export default function MainNavComponent({ activePage, setActivePage }) {
     const [navOpen, setNavOpen] = useState(false);
   
     useEffect(() => {
@@ -14,12 +14,19 @@ export default function MainNavComponent() {
         window.removeEventListener('resize', handleResize);
       };
     }, []);
+
+    
   
-    function NavItem({ navNum, NavLink, NavSite }) {
+    function NavItem({ navNum, navKey, NavSite }) {
+      const handleClick = () => {
+        setActivePage(navKey);
+        handleNavClose();
+      };
+
       return (
-        <li>
+        <li onClick={handleClick}>
           <span className="nav-item-num">{navNum}</span>
-          <a className="nav-item" href={NavLink}>
+          <a className="nav-item">
             {NavSite}
           </a>
         </li>
@@ -45,10 +52,10 @@ export default function MainNavComponent() {
             <img src="./shared/icon-close.svg" alt="404" />
           </button>
           <ul>
-            <NavItem navNum="00" NavLink="#" NavSite="HOME" />
-            <NavItem navNum="01" NavLink="#" NavSite="DESTINATION" />
-            <NavItem navNum="02" NavLink="#" NavSite="CREW" />
-            <NavItem navNum="03" NavLink="#" NavSite="TECHNOLOGY" />
+            <NavItem navNum="00" navKey="home" NavSite="HOME" />
+            <NavItem navNum="01" navKey="destinations" NavSite="DESTINATION" />
+            <NavItem navNum="02" navKey="crew" NavSite="CREW" />
+            <NavItem navNum="03" navKey="tech" NavSite="TECHNOLOGY" />
           </ul>
         </div>
       </nav>

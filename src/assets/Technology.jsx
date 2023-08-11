@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Label from "./PageLabel";
 import data from"./data.json";
 import CorrespondingBackgroundImage from "./ResponsiveBackgrounds";
+
+
 export default function TechPage(){
     const technologyDesktop = '/technology/background-technology-desktop.jpg'
     const technologyTablet = '/technology/background-technology-tablet.jpg'

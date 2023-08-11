@@ -121,6 +121,7 @@
 .main-nav-component .nav-list-wrap ul li {
   position: relative;
   padding-left: 1em;
+  cursor: pointer;
 }
 @media (min-width: 640px) {
   .main-nav-component .nav-list-wrap ul li {
