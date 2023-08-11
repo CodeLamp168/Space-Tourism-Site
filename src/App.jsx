@@ -4,6 +4,7 @@ import Home from './assets/Home';
 import './App.css'
 import Destinations from './assets/Destinations';
 import CrewMembers from './assets/Crew';
+import TechPage from './assets/Technology';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     <div className="App">
      
        <MainNavComponent/>
-       <CrewMembers/>
+       <TechPage/>
     </div>
   )
 }

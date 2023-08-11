@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;900&family=Bellefair&display=swap");
-.crew-text-info h2, .crew-text-info h3, .home-landing-page-btn, .home-main-text h1, .main-planet-interactive-component div h1, .main-planet-interactive-component .display-distance-travel-time h2 {
+.crew-text-info h2, .crew-text-info h3, .techno-info-wrapper h2, .techno-info-wrapper h3, .home-landing-page-btn, .home-main-text h1, .main-planet-interactive-component div h1, .main-planet-interactive-component .display-distance-travel-time h2 {
   font-family: "Bellefair";
 }
 
@@ -7,7 +7,7 @@
   font-family: "Barlow Condensed";
 }
 
-.crew-text-info h2, .crew-text-info h3, .home-landing-page-btn, .home-main-text h1, .main-planet-interactive-component div h1, .main-planet-interactive-component .display-distance-travel-time h2, .main-planet-interactive-component .display-distance-travel-time p, .main-planet-interactive-component .planet-interactive-nav-row button {
+.crew-text-info h2, .crew-text-info h3, .techno-info-wrapper h2, .techno-info-wrapper h3, .home-landing-page-btn, .home-main-text h1, .main-planet-interactive-component div h1, .main-planet-interactive-component .display-distance-travel-time h2, .main-planet-interactive-component .display-distance-travel-time p, .main-planet-interactive-component .planet-interactive-nav-row button {
   color: #FFFFFF;
 }
 
@@ -172,6 +172,7 @@
 }
 
 .main-content-container {
+  border: 1px solid red;
   min-height: 100vh;
   position: relative;
 }
@@ -508,27 +509,27 @@
   }
 }
 
-.crew-text-info {
+.crew-text-info, .techno-info-wrapper {
   text-align: center;
 }
-.crew-text-info h2, .crew-text-info h3 {
+.crew-text-info h2, .crew-text-info h3, .techno-info-wrapper h2, .techno-info-wrapper h3 {
   text-transform: uppercase;
 }
-.crew-text-info h3 {
-  color: rgba(255, 255, 255, 0.6235294118);
+.crew-text-info h3, .techno-info-wrapper h3 {
+  color: rgba(208, 214, 249, 0.7882352941);
   font-size: 30px;
   margin: 0;
 }
-.crew-text-info h2 {
+.crew-text-info h2, .techno-info-wrapper h2 {
   font-size: 35px;
   margin: 0;
 }
 @media (min-width: 640px) {
-  .crew-text-info h2 {
+  .crew-text-info h2, .techno-info-wrapper h2 {
     font-size: 50px;
   }
 }
-.crew-text-info p {
+.crew-text-info p, .techno-info-wrapper p {
   color: rgba(208, 214, 249, 0.8705882353);
   text-indent: 2px;
   letter-spacing: 1px;
@@ -536,7 +537,7 @@
   font-size: clamp(1.125rem, 0.9511rem + 0.8696vw, 1.25rem);
 }
 @media (min-width: 1194px) {
-  .crew-text-info {
+  .crew-text-info, .techno-info-wrapper {
     text-align: left;
   }
 }
@@ -563,4 +564,73 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.technology-content-container {
+  height: auto;
+}
+@media (min-width: 1190px) {
+  .technology-content-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.techno-display img {
+  width: 105%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 1190px) {
+  .techno-display img {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+.techno-interactive-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 1190px) {
+  .techno-interactive-component {
+    flex-direction: row;
+    gap: 2em;
+    margin-left: 2em;
+  }
+}
+
+.techno-btn-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 2em 0em;
+}
+@media (min-width: 1190px) {
+  .techno-btn-list {
+    flex-direction: column;
+    margin: 0em 0em;
+  }
+}
+.techno-btn-list button {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .techno-info-wrapper p {
+    width: 500px;
+  }
 }/*# sourceMappingURL=App.css.map */
