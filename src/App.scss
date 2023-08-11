@@ -479,14 +479,17 @@
 .crew-label {
     @media(max-width: 639px){
         order:1;
+        transform:translateY(-50px);
     }
 }
 
 .crew-content-container {
 
     display:flex;
+    justify-content:center;
     flex-direction:column-reverse;
     align-items: center;
+
 
     @media(min-width:640px){
         flex-direction:column;
