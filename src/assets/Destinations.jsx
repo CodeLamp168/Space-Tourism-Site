@@ -45,7 +45,7 @@ export default function Destinations(){
             </button>
           ))}
         </nav>
-        <div>
+        <div className="planet-destination-details">
           <h1>{data.destinations[activePlanetIndex].name}</h1>
           <p>{data.destinations[activePlanetIndex].description}</p>
           <div className="display-distance-travel-time">

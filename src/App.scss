@@ -27,6 +27,7 @@
     grid-template-rows: 0.3fr 1.7fr; 
     gap: 0px 0px; 
     position:relative;
+    overflow:hidden;
 
     .main-nav-component { grid-area: 1 / 1 / 2 / 2; }
       
@@ -291,10 +292,11 @@
     align-items:center;
     justify-content:center;
     flex-direction: column;
-    gap:1em;
+    gap:2em;
 
     height:auto;
     @media(min-width:1194px){
+        gap:1em;
         justify-content: space-evenly;
         flex-direction: row;
     }
@@ -356,6 +358,7 @@
 
     div {
         max-height:550px;
+        
         
         h1 {
             @extend %heading-2;
@@ -435,8 +438,8 @@
    
     display:flex;
     align-items: center;
-
     gap:1em;
+    animation: fadeSlideDown 500ms ease-in;
 
     @media(min-width:420px){
         align-self: self-start;
@@ -445,6 +448,7 @@
   
 
     @media(min-width:1194px){
+        animation: fadeSlideRight 500ms ease-in;
         position:Absolute;
         left:15%;
         top:10px;
@@ -600,6 +604,7 @@
     max-height:100%;
     border-bottom:1px solid #D0D6F9;
     margin-bottom:10px;
+    overflow:hidden;
     @media(min-width:640px){
         position:relative;
         border:none;
@@ -689,3 +694,120 @@
         }
     }
 }
+
+//animation areas
+
+.main-planet-interactive-component {
+
+
+    animation:fadeSlideUp 1s forwards;
+    @media(min-width:1190px){
+        animation: fadeSlideLeft  1s forwards;
+    }
+}
+
+.crew-image-container img {
+    animation: fadeSlideUp 1s forwards;
+}
+
+
+.planet-display{
+    animation:fadeSlideDown 1s forwards;
+    @media(min-width:1190px){
+        animation: fadeSlideRight  1s forwards;
+    }
+    
+}
+
+
+@keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+
+@keyframes fadeSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px); /* Initial position */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* Final position */
+    }
+}
+
+  .techno-interactive-component,  .crew-text-info{
+
+    animation: fadeSlideRight 1s forwards;
+  }
+
+  .home-main-text {
+    animation:fadeSlideDown 1s forwards;
+    @media(min-width:830px){
+        animation:fadeSlideRight 1s forwards;
+    }
+
+  }
+
+  .home-landing-page-btn {
+    animation:fadeSlideUp 1s forwards;
+    @media(min-width:830px){
+        animation:fadeSlideLeft 1s forwards;
+    }
+  }
+
+  .techno-display {
+    animation: fadeSlideDown 500ms forwards;
+    @media(min-width:1190px){
+        animation:fadeSlideLeft 500ms forwards;
+    }
+  }
+
+  .techno-info-wrapper {
+    animation:fadeSlideUp 1s forwards;
+  }
+
+
+
+  @keyframes fadeSlideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); 
+    }
+  }
+
+  @keyframes fadeSlideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(50px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); 
+    }
+  }
+
+
+ 
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); 
+    }
+  }
+  
+  
