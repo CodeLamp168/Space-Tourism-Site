@@ -318,7 +318,7 @@
 .main-planet-interactive-component .planet-interactive-nav-row button {
   border: none;
   background: none;
-  font-size: 20px;
+  font-size: clamp(0.875rem, 0.6681rem + 1.0345vw, 1.25rem);
   font-weight: 500;
   letter-spacing: 2.7px;
   cursor: pointer;
@@ -425,6 +425,7 @@
 }
 .page-label h1 {
   font-weight: 400;
+  font-size: clamp(1.25rem, 0.9052rem + 1.7241vw, 1.875rem);
 }
 
 .crew-content-container {
