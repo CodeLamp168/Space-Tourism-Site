@@ -34,6 +34,22 @@ $font-family-text: 'Barlow Condensed', sans-serif;
     position: relative;
     padding: 1em 1em;
 
+    @media(min-width:1280px){
+        &::before {
+            content: '';
+            height: 3px;
+            background:#d0d6f97a;
+            position: absolute;
+            left: 120px;
+            transform: translateY(0%);
+            width: 32%;
+            z-index:2;
+    
+          }
+    
+    }
+  
+
     @media (min-width: 640px) {
         padding: 0;
     }
@@ -76,6 +92,7 @@ $font-family-text: 'Barlow Condensed', sans-serif;
             transform:translateX(-3%);
         }
 
+
         @media (min-width: 640px) {
             position: relative;
             display: flex;
@@ -111,13 +128,12 @@ $font-family-text: 'Barlow Condensed', sans-serif;
         }
 
         li {
-            position: relative;
             padding-left: 1em;
             @media (min-width: 640px) {
                 padding-left: 0;
             }
             cursor: pointer;
-
+            
             &::before {
                 content: '';
                 position: absolute;
@@ -125,23 +141,31 @@ $font-family-text: 'Barlow Condensed', sans-serif;
                 height: 3px;
                 background-color: white;
                 bottom: 0;
-
+                
                 @media (min-width: 640px) {
                     bottom: -48px;
                 }
                 @media (min-width: 836px) {
                     bottom: -37px;
                 }
-
+                
                 transition: width 300ms ease-in;
             }
-
-            &:hover::before {
+            
+            &:not(.activeNavBtn):hover::before {
                 width: 50%;
                 @media (min-width: 640px) {
                     width: 100%;
                 }
             }
+            
+            &.activeNavBtn::before {
+                width: 50%;
+                @media (min-width: 640px) {
+                    width: 100%;
+                }
+            }
+            position: relative;
 
             .nav-item-num {
                 font-size: 23px;
@@ -328,6 +352,8 @@ $font-family-text: 'Barlow Condensed', sans-serif;
             position: relative;
             padding-bottom: 5px;
             transition: border 100ms ease-in;
+
+    
         }
 
         .destination-active {
@@ -642,6 +668,12 @@ $font-family-text: 'Barlow Condensed', sans-serif;
         border: none;
         font-size: 25px;
         cursor: pointer;
+        transition: background 500ms ease, color 300ms ease; 
+
+        &.active-tech-btn {
+            background: rgba(255, 255, 255, 0.979);
+            color: rgb(0, 0, 0);
+          }
     }
 }
 

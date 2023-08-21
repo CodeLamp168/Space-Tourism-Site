@@ -33,6 +33,18 @@
   position: relative;
   padding: 1em 1em;
 }
+@media (min-width: 1280px) {
+  .main-nav-component::before {
+    content: "";
+    height: 3px;
+    background: rgba(208, 214, 249, 0.4784313725);
+    position: absolute;
+    left: 120px;
+    transform: translateY(0%);
+    width: 32%;
+    z-index: 2;
+  }
+}
 @media (min-width: 640px) {
   .main-nav-component {
     padding: 0;
@@ -114,9 +126,9 @@
   }
 }
 .main-nav-component ul li {
-  position: relative;
   padding-left: 1em;
   cursor: pointer;
+  position: relative;
 }
 @media (min-width: 640px) {
   .main-nav-component ul li {
@@ -142,11 +154,19 @@
     bottom: -37px;
   }
 }
-.main-nav-component ul li:hover::before {
+.main-nav-component ul li:not(.activeNavBtn):hover::before {
   width: 50%;
 }
 @media (min-width: 640px) {
-  .main-nav-component ul li:hover::before {
+  .main-nav-component ul li:not(.activeNavBtn):hover::before {
+    width: 100%;
+  }
+}
+.main-nav-component ul li.activeNavBtn::before {
+  width: 50%;
+}
+@media (min-width: 640px) {
+  .main-nav-component ul li.activeNavBtn::before {
     width: 100%;
   }
 }
@@ -626,6 +646,11 @@
   border: none;
   font-size: 25px;
   cursor: pointer;
+  transition: background 500ms ease, color 300ms ease;
+}
+.techno-btn-list button.active-tech-btn {
+  background: rgba(255, 255, 255, 0.979);
+  color: rgb(0, 0, 0);
 }
 
 @media (min-width: 768px) {
