@@ -4,9 +4,9 @@ import Label from "./PageLabel";
 import data from './data.json';
 
 export default function CrewMembers() {
-  const destinationDesktop = '/crew/background-crew-desktop.jpg';
-  const destinationTablet = '/crew/background-crew-tablet.jpg';
-  const destinationMobile = '/crew/background-crew-mobile.jpg';
+  const destinationDesktop = 'crew/background-crew-desktop.jpg';
+  const destinationTablet = 'crew/background-crew-tablet.jpg';
+  const destinationMobile = 'crew/background-crew-mobile.jpg';
 
   function CrewDisplayComponent({ crewMember, selectedCrewIndex, onCrewButtonClick }) {
     return (
