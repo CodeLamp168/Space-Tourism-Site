@@ -5,9 +5,9 @@ import CorrespondingBackgroundImage from "./ResponsiveBackgrounds";
 
 
 export default function TechPage(){
-    const technologyDesktop = '/technology/background-technology-desktop.jpg'
-    const technologyTablet = '/technology/background-technology-tablet.jpg'
-    const technologyMobile = '/technology/background-technology-mobile.jpg'
+    const technologyDesktop = 'technology/background-technology-desktop.jpg'
+    const technologyTablet = 'technology/background-technology-tablet.jpg'
+    const technologyMobile = 'technology/background-technology-mobile.jpg'
 
 
 function TechnologyDisplayComponent() {

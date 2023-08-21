@@ -3,9 +3,9 @@ import CorrespondingBackgroundImage from "./ResponsiveBackgrounds"
 import Label from './PageLabel';
 import data from "./data.json"
 export default function Destinations(){
-    const destinationDesktop = '/destination/background-destination-desktop.jpg'
-    const destinationTablet = '/destination/background-destination-tablet.jpg'
-    const destinationMobile = '/destination/background-destination-mobile.jpg'
+    const destinationDesktop = 'destination/background-destination-desktop.jpg'
+    const destinationTablet = 'destination/background-destination-tablet.jpg'
+    const destinationMobile = 'destination/background-destination-mobile.jpg'
 
     function PlanetDisplayComponent(){
       const [activePlanetIndex, setActivePlanetIndex] = useState(0);
