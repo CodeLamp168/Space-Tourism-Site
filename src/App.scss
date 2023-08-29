@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;900&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700&family=Bellefair&display=swap');
 
 $font-family-heading: 'Bellefair', sans-serif;
 $font-family-text: 'Barlow Condensed', sans-serif;
@@ -217,45 +217,52 @@ $font-family-text: 'Barlow Condensed', sans-serif;
     min-width: 320px;
     max-width: 100%;
 
-    h3 {
-        @extend %heading-4;
-        color: #D0D6F9;
-        letter-spacing: 4.75px;
-        font-weight: 500;
 
-        @media (min-width: 836px) {
-            margin-bottom: 2em;
+
+    h3 {
+        font-family:'Barlow Condensed';
+        color: #D0D6F9;
+        letter-spacing: 4.45px;
+        font-weight: 400;
+        font-size:32px;
+       
+        @media(min-width:836px){
+            line-height: 5px;
         }
+   
+
+
     }
 
     h1 {
         font-size: clamp(6.25rem, 1.9022rem + 21.7391vw, 9.375rem);
         margin: 0;
         @extend %heading-1;
-        line-height: 150px;
+        line-height: 190px;
     }
 
     p {
-        color: #D0D6F9;
-        letter-spacing: 3px;
+        color: #d9def5;
+        letter-spacing: 1px;
         font-weight: 400;
-        font-size: clamp(1.0625rem, 0.9755rem + 0.4348vw, 1.125rem);
-        padding: 0 1em;
+        font-size: clamp(1.0625rem, 0.9755rem + 0.4348vw, 1.525rem);
+        line-height: 30px;
+        font-size:19px;
+       
 
         @media (min-width: 836px) {
-            margin-top: 2em;
             margin-bottom: 5em;
-            padding: 0;
+
         }
     }
 
     @media (min-width: 836px) {
-        max-width: 550px;
+        max-width: 500px;
     }
 
     @media(min-width:1025px){
         position:relative;
-        bottom:-120px;
+        bottom:-100px;
         text-align: left;
     }
 }
@@ -344,7 +351,7 @@ $font-family-text: 'Barlow Condensed', sans-serif;
             @extend %nav-text;
             border: none;
             background: none;
-            font-size: clamp(0.875rem, 0.6681rem + 1.0345vw, 1.25rem);
+            font-size: clamp(0.875rem, 0.6681rem + 1.0345vw, 0.5rem);
             font-weight: 500;
             letter-spacing: 2.7px;
             cursor: pointer;
@@ -366,16 +373,21 @@ $font-family-text: 'Barlow Condensed', sans-serif;
 
         h1 {
             @extend %heading-2;
-            font-size: clamp(6.25rem, 1.9022rem + 21.7391vw, 7.375rem);
+            font-size: clamp(6.25rem, 1.9022rem + 21.7391vw, 4.375rem);
             margin: 0;
         }
 
         p {
             margin: 0;
-            color: #D0D6F9;
-            letter-spacing: 3px;
+            color: #c9d3ff;
+            letter-spacing: 1.20px;
             font-weight: 400;
-            font-size: clamp(0.1rem, 0.9755rem + 0.4348vw, 1.25rem);
+            line-height: 29px;
+            font-size:19px;
+
+            @media(min-width:1194px){
+                max-width:420px;
+            }
         }
 
         @media (max-width: 330px) {
@@ -388,16 +400,16 @@ $font-family-text: 'Barlow Condensed', sans-serif;
             p {
                 margin: 0;
                 color: #D0D6F9;
-                letter-spacing: 3px;
                 font-weight: 400;
-                font-size: 15px;
+                font-size: 18px;
+                padding:0px 5px;
             }
         }
     }
 
     .display-distance-travel-time {
         margin-top: 3em;
-        padding-top: 1em;
+        padding-top: 2em;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -405,16 +417,16 @@ $font-family-text: 'Barlow Condensed', sans-serif;
         border-top: 2px solid #d0d6f9d7;
 
         p {
-            @extend %subheading-2;
+            font-family:'Barlow Condensed';
             color: #D0D6F9;
-            font-size: 18px;
+            font-size: 16px;
             margin: 0;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         h2 {
             @extend %subheading-1;
-            font-size: 28px;
+            font-size: 26px;
             margin-top: 5px;
             letter-spacing: 2px;
         }
