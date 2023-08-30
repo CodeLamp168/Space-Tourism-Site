@@ -379,11 +379,11 @@ $font-family-text: 'Barlow Condensed', sans-serif;
 
         p {
             margin: 0;
-            color: #c9d3ff;
-            letter-spacing: 1.20px;
-            font-weight: 400;
-            line-height: 29px;
-            font-size:19px;
+            color: #dadff5;
+            letter-spacing: 1.0px;
+            font-weight: 300;
+            line-height: 30px;
+            font-size:20px;
 
             @media(min-width:1194px){
                 max-width:420px;
@@ -400,7 +400,6 @@ $font-family-text: 'Barlow Condensed', sans-serif;
             p {
                 margin: 0;
                 color: #D0D6F9;
-                font-weight: 400;
                 font-size: 18px;
                 padding:0px 5px;
             }
@@ -422,6 +421,7 @@ $font-family-text: 'Barlow Condensed', sans-serif;
             font-size: 16px;
             margin: 0;
             letter-spacing: 1px;
+            font-weight:300;
         }
 
         h2 {
@@ -563,7 +563,7 @@ $font-family-text: 'Barlow Condensed', sans-serif;
     }
 }
 
-.crew-text-info, .techno-info-wrapper {
+.crew-text-info {
     text-align: center;
     
 
@@ -574,7 +574,7 @@ $font-family-text: 'Barlow Condensed', sans-serif;
 
     h3 {
         color: #a5a7b1c9;
-        font-size: 32px;
+        font-size: 28px;
         margin: 0;
 
     }
@@ -664,16 +664,74 @@ $font-family-text: 'Barlow Condensed', sans-serif;
     }
 }
 
+.techno-info-wrapper {
+    text-align: center;
+    position:relative;
+    
+
+    h2, h3 {
+        @extend %heading-1;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        color: #D0D6F9;
+        font-size: 16px;
+        font-weight:300;
+        letter-spacing:1.8px;
+        font-family:'Barlow Condensed';
+        margin: 0;
+
+    }
+
+    h2 {
+        font-size: 32px;
+        margin: 0;
+        @media (min-width: 640px) {
+            font-size: 55px;
+        }
+    }
+
+    p {
+        color: #D0D6F9;
+        text-indent: 2px;
+        font-weight: 300;
+        letter-spacing:0.8px;
+        font-size: 18px;
+
+        @media(min-width:1194px){
+            margin-top:2px;
+            font-size:22px;
+        }
+    }
+
+    @media (min-width: 1194px) {
+        text-align: left;
+        width:550px;
+        height:340px;
+        display:flex;
+        justify-content: center;
+        align-items:flex-start;
+        flex-direction:column;
+    }
+}
+
 .techno-interactive-component {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition:left 3s ease-in;
 
     @media (min-width: 1190px) {
         flex-direction: row;
-        gap: 2em;
+        gap:3em;
         margin-left: 2em;
+        position:relative;
+    }
+
+    @media(min-width:1380px){
+        left:150px;
     }
 }
 
@@ -691,13 +749,14 @@ $font-family-text: 'Barlow Condensed', sans-serif;
     }
 
     button {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
         border-radius: 100px;
-        border: none;
+        border: 1px solid rgba(255, 255, 255, 0.336);
         font-size: 25px;
         cursor: pointer;
         transition: background 500ms ease, color 300ms ease; 
+        background-color:#0f122057;
 
         &.active-tech-btn {
             background: rgba(255, 255, 255, 0.979);
