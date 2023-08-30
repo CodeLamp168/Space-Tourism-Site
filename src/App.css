@@ -440,7 +440,7 @@
   .page-label {
     animation: fadeSlideRight 500ms ease-in;
     position: absolute;
-    left: 15%;
+    left: 10%;
     top: 10px;
   }
 }
@@ -448,11 +448,11 @@
   letter-spacing: 5px;
 }
 .page-label h2 {
-  font-size: 28px;
-  color: rgba(255, 255, 255, 0.4745098039);
+  font-size: 30px;
+  color: rgba(184, 184, 184, 0.4745098039);
 }
 .page-label h1 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: clamp(1.25rem, 0.9052rem + 1.7241vw, 1.875rem);
 }
 
@@ -486,12 +486,12 @@
   .crew-content-container .crew-detail-container {
     flex-direction: column;
   }
-  .crew-content-container .crew-detail-container .crew-btn-list {
-    margin-bottom: auto;
-  }
 }
-@media (min-width: 1190px) {
+@media (min-width: 1194px) {
   .crew-content-container .crew-detail-container {
+    position: relative;
+    top: -120px;
+    left: 50px;
     width: 550px;
   }
 }
@@ -501,16 +501,17 @@
   justify-content: center;
   gap: 1em;
   order: 1;
-  margin-bottom: 1em;
   bottom: 0px;
+  margin-bottom: 2em;
 }
 .crew-content-container .crew-detail-container .crew-btn-list .crew-display-btn {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   border-radius: 100px;
   border: none;
   font-size: 25px;
   cursor: pointer;
+  box-shadow: 0px 0px 0px 1px rgba(218, 218, 218, 0.137);
 }
 .crew-content-container .crew-detail-container .crew-btn-list .active-crew-display-btn {
   background: white;
@@ -518,7 +519,9 @@
 @media (min-width: 1194px) {
   .crew-content-container .crew-detail-container .crew-btn-list {
     justify-content: flex-start;
-    margin-bottom: 5em;
+    position: relative;
+    bottom: -80px;
+    gap: 2em;
   }
 }
 
@@ -536,29 +539,37 @@
   text-transform: uppercase;
 }
 .crew-text-info h3, .techno-info-wrapper h3 {
-  color: rgba(208, 214, 249, 0.7882352941);
-  font-size: 30px;
+  color: rgba(165, 167, 177, 0.7882352941);
+  font-size: 32px;
   margin: 0;
 }
 .crew-text-info h2, .techno-info-wrapper h2 {
-  font-size: 35px;
+  font-size: 32px;
   margin: 0;
 }
 @media (min-width: 640px) {
   .crew-text-info h2, .techno-info-wrapper h2 {
-    font-size: 50px;
+    font-size: 55px;
   }
 }
 .crew-text-info p, .techno-info-wrapper p {
   color: rgba(208, 214, 249, 0.8705882353);
   text-indent: 2px;
-  letter-spacing: 1px;
-  font-weight: 400;
+  font-weight: 300;
+  letter-spacing: 0.5px;
   font-size: clamp(1.125rem, 0.9511rem + 0.8696vw, 1.25rem);
+}
+@media (min-width: 1194px) {
+  .crew-text-info p, .techno-info-wrapper p {
+    font-size: 22px;
+    width: 450px;
+  }
 }
 @media (min-width: 1194px) {
   .crew-text-info, .techno-info-wrapper {
     text-align: left;
+    width: 550px;
+    height: 340px;
   }
 }
 
