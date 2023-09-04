@@ -49,9 +49,9 @@ export default function MainNavComponent() {
         </button>
         <ul>
           <NavItem navNum="00" navKey="/Space-Tourism-Site" NavSite="HOME" />
-          <NavItem navNum="01" navKey="/Destinations" NavSite="DESTINATION" />
-          <NavItem navNum="02" navKey="/Crew" NavSite="CREW" />
-          <NavItem navNum="03" navKey="/Technology" NavSite="TECHNOLOGY" />
+          <NavItem navNum="01" navKey="/Space-Tourism-Site/Destinations" NavSite="DESTINATION" />
+          <NavItem navNum="02" navKey="/Space-Tourism-Site/Crew" NavSite="CREW" />
+          <NavItem navNum="03" navKey="/Space-Tourism-Site/Technology" NavSite="TECHNOLOGY" />
         </ul>
       </div>
     </nav>

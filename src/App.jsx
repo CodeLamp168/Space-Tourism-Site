@@ -9,16 +9,16 @@ import TechPage from './assets/Technology';
 
 function App() {
   const [activePage, setActivePage] = useState('home');
-
+  
   return (
     <Router>
       <div className="App">
         <MainNavComponent activePage={activePage} setActivePage={setActivePage} />
         <Routes>
-           <Route exact path="/Space-Tourism-Site" element={<Home/>} component={Home}/>
-           <Route path="/Destinations" element={<Destinations/>}component={Destinations}/>
-           <Route path="/Crew" element={<CrewMembers/>} component={CrewMembers}/>
-           <Route path="/Technology" element={<TechPage/>} component={TechPage}/>
+           <Route exact path="/Space-Tourism-Site" forceRefresh={true} element={<Home/>} component={Home}/>
+           <Route path="/Space-Tourism-Site/Destinations" forceRefresh={true} element={<Destinations/>}component={Destinations}/>
+           <Route path="/Space-Tourism-Site/Crew" forceRefresh={true} element={<CrewMembers/>} component={CrewMembers}/>
+           <Route path="/Space-Tourism-Site/Technology"  forceRefresh={true} element={<TechPage/>} component={TechPage}/>
         </Routes>
       </div>
     </Router>
