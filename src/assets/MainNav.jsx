@@ -29,7 +29,7 @@ export default function MainNavComponent() {
   function NavItem({ navNum, navKey, NavSite }) {
     return (
       <li className={`nav-item ${location.pathname === `/${navKey}` ? 'activeNavBtn' : ''}`}>
-        <Link to={`${navKey}`}>
+        <Link to={`${navKey} `}style={{ textDecoration: 'none', color: '#FFFFFF' }} >
           <span className="nav-item-num">{navNum}</span>
           {NavSite}
         </Link>
