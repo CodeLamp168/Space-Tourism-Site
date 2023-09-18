@@ -48,7 +48,7 @@ export default function MainNavComponent() {
           <img src="./shared/icon-close.svg" alt="404" />
         </button>
         <ul>
-          <NavItem navNum="00" navKey="/Space-Tourism-Site" NavSite="HOME" />
+          <NavItem navNum="00" navKey="/Space-Tourism-Site/" NavSite="HOME" />
           <NavItem navNum="01" navKey="/Space-Tourism-Site/Destinations" NavSite="DESTINATION" />
           <NavItem navNum="02" navKey="/Space-Tourism-Site/Crew" NavSite="CREW" />
           <NavItem navNum="03" navKey="/Space-Tourism-Site/Technology" NavSite="TECHNOLOGY" />
