@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-export default function MainNavComponent({ activePage, setActivePage }) {
+export default function MainNavComponent() {
   const [navOpen, setNavOpen] = useState(false);
-  const [activeNavKey, setActiveNavKey] = useState(null);
+  const location = useLocation();
 
   useEffect(() => {
     function handleResize() {
@@ -17,23 +18,6 @@ export default function MainNavComponent({ activePage, setActivePage }) {
     };
   }, []);
 
-  function NavItem({ navNum, navKey, NavSite }) {
-    const handleClick = () => {
-      setActivePage(navKey);
-      setActiveNavKey(navKey); // Set the active navigation key
-      handleNavClose();
-    };
-
-    return (
-      <li className={`nav-item ${activeNavKey === navKey ? 'activeNavBtn' : ''}`} onClick={handleClick}>
-        <span className="nav-item-num">{navNum}</span>
-        <a className="nav-item">
-          {NavSite}
-        </a>
-      </li>
-    );
-  }
-
   function handleNavOpen() {
     setNavOpen(true);
   }
@@ -42,8 +26,19 @@ export default function MainNavComponent({ activePage, setActivePage }) {
     setNavOpen(false);
   }
 
+  function NavItem({ navNum, navKey, NavSite }) {
+    return (
+      <li className={`nav-item ${location.pathname === `/${navKey}` ? 'activeNavBtn' : ''}`}>
+        <Link to={`${navKey} `}style={{ textDecoration: 'none', color: '#FFFFFF' }} >
+          <span className="nav-item-num">{navNum}</span>
+          {NavSite}
+        </Link>
+      </li>
+    );
+  }
+
   return (
-    <nav className="main-nav-component">
+    <nav className={`main-nav-component ${navOpen ? 'nav-open' : ''}`}>
       <img className="main-web-logo" src="./shared/logo.svg" alt="404" />
       <button className="nav-open-btn" onClick={handleNavOpen}>
         <img src="./shared/icon-hamburger.svg" alt="404" />
@@ -53,10 +48,10 @@ export default function MainNavComponent({ activePage, setActivePage }) {
           <img src="./shared/icon-close.svg" alt="404" />
         </button>
         <ul>
-          <NavItem navNum="00" navKey="home" NavSite="HOME" />
-          <NavItem navNum="01" navKey="destinations" NavSite="DESTINATION" />
-          <NavItem navNum="02" navKey="crew" NavSite="CREW" />
-          <NavItem navNum="03" navKey="tech" NavSite="TECHNOLOGY" />
+          <NavItem navNum="00" navKey="/Space-Tourism-Site" NavSite="HOME" />
+          <NavItem navNum="01" navKey="/Space-Tourism-Site/Destinations" NavSite="DESTINATION" />
+          <NavItem navNum="02" navKey="/Space-Tourism-Site/Crew" NavSite="CREW" />
+          <NavItem navNum="03" navKey="/Space-Tourism-Site/Technology" NavSite="TECHNOLOGY" />
         </ul>
       </div>
     </nav>
